@@ -1,6 +1,6 @@
 Identificador del camino;Ciudades;Km;Duración;Peajes;Tráfico
 1;San Juan-Caucete-Chepes;212;167;True;1
-2;San Juan-Caucete-Quines - Chepes;476;342;False;1
+2;San Juan-Caucete-Quines-Chepes;476;342;False;1
 3;San Juan-Caucete-Mina Clavero-Taninga-Chepes;643;563;False;1.5
 4;San Juan-Caucete-San Luis-Quines-Chepes;621;458;False;0.5
 5;San Juan-San Luis-Quines-Chepes;677;499;True;1

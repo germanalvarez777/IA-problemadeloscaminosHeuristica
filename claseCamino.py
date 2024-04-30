@@ -31,17 +31,6 @@ class Camino:
 
     def get_trafico(self):
         return self.__trafico
-    
-    def heuristica_camino (self):
-        if self.__peaje == True:
-            self.__h= (self.__km * 0.6) + (self.peso_ciudades()) + (self.__duracion * 1) + 0.2 + (self.__trafico * 0.4) 
-        else:
-            self.__h= (self.__km * 0.6) + (self.peso_ciudades()) + (self.__duracion * 1) + (self.__trafico * 0.4) 
-        
-        self.__h = round(self.__h, 2)
-
-    def get_heuristica_camino (self):
-        return self.__h
 
     def peso_ciudades (self):
         acumulador = 0
@@ -64,6 +53,17 @@ class Camino:
             elif ciudad == "Taninga":
                 acumulador += 0.01
         return acumulador
+
+    def heuristica_camino (self):
+        if self.__peaje == True:
+            self.__h= (self.__km * 0.6) + (self.peso_ciudades()) + (self.__duracion * 1) + 0.2 + (self.__trafico * 0.4) 
+        else:
+            self.__h= (self.__km * 0.6) + (self.peso_ciudades()) + (self.__duracion * 1) + (self.__trafico * 0.4) 
+        
+        self.__h = round(self.__h, 2)
+
+    def get_heuristica_camino (self):
+        return self.__h
 
     def __lt__ (self, otro):           #sobrecarga para ordenar caminos
         if type(self) == type(otro):

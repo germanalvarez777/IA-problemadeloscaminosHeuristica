@@ -34,7 +34,7 @@ class ListaCamino:
 
     def mostrar_caminos (self):
         for camino in self.__listaCamino:
-            print(f"Id Camino: {camino.get_id_camino()}\nCiudades: {camino.get_ciudades()}\nKilometros: {camino.get_km()}\nDuracion: {camino.get_duracion()}\nPeaje: {camino.get_peaje()}\nTrafico: {camino.get_trafico()}\n")
+            print(f"Id Camino: {camino.get_id_camino()}\nCiudades: {camino.get_ciudades()}\nKilometros: {camino.get_km()} km\nDuracion: {camino.get_duracion()} min\nPeaje: {camino.get_peaje()}\n")
             print(f"Peso heuristica: {camino.get_heuristica_camino()}")
             print("=====================================================")
 
