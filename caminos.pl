@@ -24,19 +24,6 @@ ruta(21,"V.Mercedes","R2").
 camino(Co,Cd,[Co,Cd]):-ruta(_,Co,Cd).
 camino(Co,Cd,[Co|Y]):-ruta(_,Co,Ci),camino(Ci,Cd,Y).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+% Para ejecutar consulta
+% camino("Cap(SJ)","Chepes",X),set_prolog_flag(answer_write_options,[max_depth(0)]).
+% De esa forma se puede mostrar todo la lista sin truncarla
