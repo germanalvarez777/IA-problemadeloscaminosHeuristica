@@ -36,12 +36,12 @@ class ListaCamino:
         for camino in self.__listaCamino:
             print(f"Id Camino: {camino.get_id_camino()}\nCiudades: {camino.get_ciudades()}\nKilometros: {camino.get_km()} km\nDuracion: {camino.get_duracion()} min\nPeaje: {camino.get_peaje()}\n")
             print(f"Peso heuristica: {camino.get_heuristica_camino()}")
-            print("=====================================================")
+            print("==================================================================")
 
 if __name__ == '__main__':
     lista = ListaCamino()
     lista.testListaCamino()
     lista.calcular_heuristica()
     print("Se muestra la lista de caminos posibles ordenadas por heurística:\n")
-    print("=====================================================")
+    print("==================================================================")
     lista.mostrar_caminos()

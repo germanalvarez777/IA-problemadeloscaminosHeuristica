@@ -40,7 +40,7 @@ class Camino:
                 acumulador += 1
             elif ciudad == "San Juan" or ciudad == "Villa Mercedes":
                 acumulador += 0.8
-            elif ciudad == "Rotonda Villa Dolores":
+            elif ciudad == "Villa Dolores":
                 acumulador += 0.6
             elif ciudad == "Caucete":
                 acumulador += 0.4    
@@ -51,6 +51,8 @@ class Camino:
             elif ciudad == "Quines":
                 acumulador += 0.1
             elif ciudad == "Taninga":
+                acumulador += 0.01
+            else:             #para el caso de las rutas,no influye la ciudad en el transito
                 acumulador += 0.01
         return acumulador
 
