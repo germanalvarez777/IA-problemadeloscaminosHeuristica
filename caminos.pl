@@ -1,4 +1,4 @@
-% Hechos con todas las rutas
+% Hechos con todas las rutas (numero,Corigen,Cdestino)
 ruta(1,"Cap(SJ)","Caucete").
 ruta(2,"Caucete","Chepes").
 ruta(3,"Caucete","Quines").
@@ -20,7 +20,7 @@ ruta(18,"R148","R20").
 ruta(19,"E91","R79").
 ruta(20,"Cap(SL)","V.Mercedes").
 ruta(21,"V.Mercedes","R2").
-% Se definen las reglas.
+% Dos reglas para imprimir el camino, considerando Corigen y Cdestino.
 camino(Co,Cd,[Co,Cd]):-ruta(_,Co,Cd).
 camino(Co,Cd,[Co|Y]):-ruta(_,Co,Ci),camino(Ci,Cd,Y).
 
