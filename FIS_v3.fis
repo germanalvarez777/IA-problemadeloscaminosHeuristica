@@ -1,0 +1,50 @@
+[System]
+Name='FIS_v3'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=6
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='LLUVIA'
+Range=[0 100]
+NumMFs=3
+MF1='BAJA':'trapmf',[-36 -4 25 40]
+MF2='IMPORTANTE':'trimf',[20 50 70]
+MF3='INTENSA':'trapmf',[60 70 100 120]
+
+[Input2]
+Name='SUELO'
+Range=[0 100]
+NumMFs=2
+MF1='HUMEDO':'trimf',[15 35 80]
+MF2='EMPAPADO':'trapmf',[45 70 120 150]
+
+[Input3]
+Name='TOPOGRAFIA'
+Range=[0 100]
+NumMFs=2
+MF1='SUAVE':'trapmf',[2 4 15 25]
+MF2='ESCARPADA':'trapmf',[10 20 30 50]
+
+[Output1]
+Name='GRAVEDAD'
+Range=[0 20]
+NumMFs=3
+MF1='NULO':'trapmf',[-1 0 5 7]
+MF2='MEDIO':'trapmf',[6 8 12 14]
+MF3='GRAVE':'trapmf',[13 15 20 25]
+
+[Rules]
+1 0 0, 1 (0.8) : 1
+2 2 0, 3 (0.7) : 1
+2 1 0, 2 (0.9) : 1
+3 2 0, 3 (0.5) : 1
+3 1 2, 3 (0.7) : 1
+3 1 1, 2 (0.7) : 1
